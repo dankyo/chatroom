@@ -9,8 +9,7 @@ while(pseudo == null || pseudo == undefined || pseudo.trim() == "");
 socket.emit('nouveau_client', pseudo);
 document.title = document.title + " " + pseudo;
 
-var date = new Date();
-insereMessage(">>", "Connecté(e) à " + date.toString());
+insereMessage(">>", "Connecté(e)");
 
 
 socket.on('message', function(data) 

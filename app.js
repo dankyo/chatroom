@@ -20,7 +20,8 @@ io.sockets.on('connection', function (socket, pseudo)
 {
     socket.on('nouveau_client', function(pseudo) 
     {
-        console.log(pseudo + " s'est connecté(e).");
+        var date = new Date();
+        console.log(date.toString() + " : " + pseudo + " s'est connecté(e).");
         pseudo = ent.encode(pseudo);
         socket.pseudo = pseudo;
         socket.broadcast.emit('nouveau_client', pseudo);
